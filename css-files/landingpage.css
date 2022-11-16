@@ -1,0 +1,669 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,400&display=swap');
+
+
+/*css reset*/
+body
+{
+     overflow-x: hidden;
+   font-family: 'Roboto', sans-serif;  
+    font-family: 'Open Sans', sans-serif;
+}
+
+*{
+    /* font-family: 'PT Serif', serif;*/
+    margin: 0;
+    padding: 0;
+   
+}
+
+
+a {
+    text-decoration: none;
+   }
+   li {
+    list-style: none;
+   }
+/*navbar*/
+nav{
+   
+    background-color: rebeccapurple;
+    height: 57px;
+    width: 100%;
+    position:fixed;
+}
+
+label.logo{
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 60px;
+    padding: 0px 11px;
+    border: 4px solid white;
+    border-radius: 11px;
+    margin-left: 39px;
+    opacity: 0.8;
+}
+
+nav ul{
+    float: right;
+    margin-right: 94px;
+    
+
+}
+
+nav ul li{
+    display:inline-block;
+    line-height: 60px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 15px;
+    font-size: bolder;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    padding: 7px 13px;
+}
+a.active, nav ul li a:hover {
+    background-color: rgb(199, 130, 255);
+    border-radius: 3px;
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 60px;
+    margin-right: 40px;
+   cursor: pointer;
+   display: none;
+}
+
+   #check{
+    display: none;
+   }
+ 
+/*for navbar responsiveness*/
+@media (max-width: 952px){
+
+    label.logo{
+        font-size: 30px;
+       
+    }
+nav ul li a{
+    font-size: 13px;
+}
+}
+
+@media (max-width: 858px){
+
+.checkbtn{
+    display: block;
+    
+}
+ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #1f1d27;
+    top: 61px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+}
+
+
+nav ul li{
+    display: block;
+    margin: 30px 0;
+    line-height: 30px;
+}
+
+nav ul li a{
+    font-size: 20px;
+}
+
+a:hover, a.active{
+    background: none;
+    background-color: rebeccapurple;
+    border-radius: 2px;
+
+}
+
+#check:checked ~ ul{
+   left: 0;
+}
+
+nav ul li a:active {
+left: 0;
+transition: all .5s;
+}
+.clicked{
+    opacity: 0;
+  }
+}
+
+
+
+
+
+/*homepage*/
+
+#Home{
+    background-color: rgb(34, 34, 34);
+    height: 66vh;
+    background-image: url('../images/welcome.png');
+  background-position:bottom;
+  background-repeat: no-repeat;
+  background-position: 50% 10%;
+  background-size: 35%;
+   
+    
+}
+
+
+
+/*Skills section*/
+
+#skills{
+    width: 100%;
+  color: rgb(233, 221, 221);
+    height: 97vh;
+    background-color: rgb(34, 34, 34);
+ 
+    
+    
+}
+
+#heading-3{
+    color: white;
+    font-weight: bold;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 20px;
+}
+
+.container1
+{
+    height: 59vh;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    grid-gap: 1rem;
+    padding: 1rem 55px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: small;
+    margin: 25px;
+    
+}
+
+.skill-box{
+padding: 1.2rem;
+color:rgb(255, 255, 255);
+cursor: pointer;
+margin: 1px;
+border: 1px solid white;
+border-radius: 3px;
+
+}
+
+.skill-box:hover> .skill-title::after , .skill-box:hover> .skill-title::before{
+    width: 40px;
+}
+
+.skill-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+.skill-title::after{
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    right: 45%;
+    width: 4vw;
+    height: 4px;
+    border-radius: 2px 0px 0 2px;
+    background-color:rgb(132, 0, 255);
+    transition: 3s;
+}
+
+.skill-title::before{
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    width: 4vw;
+    height: 4px;
+    border-radius: 0 2px 2px 0px;
+    background-color: rgb(132, 0, 255);
+    transition: 3s;
+}
+
+.skill-box:hover {
+    transform: translateY(-13px);
+    background-color:  rgb(21, 2, 43);
+   }
+
+.skill-title,h3{
+    margin-top: 4px;
+    
+}
+
+.skill-icon{
+    width: 10%;
+    border-radius: 20px;
+    background-color: white;
+    padding:5px;
+    z-index: 0;
+    height: 10%;
+}
+
+p{
+    font-size: small;
+    font-family: 'Lato', sans-serif;
+}
+
+/*About page*/
+
+
+#about-me{
+    background-color: rgb(34, 34, 34);
+    color: white;
+    height: 130vh;
+    width: 100%;
+  font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+   
+}
+
+.about-container{
+    margin-top: 37px;
+        height:11vh;
+        display:grid;
+        grid-template-columns: repeat(1fr);
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin-left: 30%;
+        grid-gap: 2.8rem;
+        width: 40%;
+       
+    }
+
+
+.para-about1{
+  
+transition: all .4s ease;
+text-align: center;
+font-size: 14px;
+border-radius: 20px;
+}
+
+.about-heading{
+    color:white;
+    width: 45%;
+    margin-left: 26%;
+    padding: 10px;
+    text-align: center;
+    font-size: 27px;
+    height: 33px;
+    border: 1px dashed white;
+}
+
+
+.about-icon{
+    height: 220px;
+    width: 220px;
+  transition: all .4s ease;
+  border: 5px solid rgb(142, 7, 233);
+ border-radius: 163px;
+  margin-top: 5%;
+  
+}
+
+.about-icon:hover{
+    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+  box-shadow: 10px 10px rgba(0,0,0,.25);
+  animation: sway 5s linear infinite;
+}
+.btn{
+    width: 7rem;
+    height: 2.5rem;
+    border: 3px solid rgb(142, 7, 233);
+    border-radius: 7px;
+    margin-left: 12px;
+}
+.btn-2{
+    width: 7rem;
+    height: 2.5rem;
+    border: 3px solid rgb(142, 7, 233);
+    border-radius: 7px;
+    margin-right: 12px;
+}
+
+.btn-2:hover {
+    background-color: rgb(204, 0, 255);
+    color: red;
+    transform: translatex(5px);
+
+
+  }
+
+  .btn:hover {
+    background-color: rgb(158, 111, 247);
+    transform: translatex(5px);
+  }
+
+
+/*projects completed*/
+#projects-completed{
+    height: 160vh;  
+    background-color: rgb(34, 34, 34);
+    font-family: 'Roboto', sans-serif;  
+    
+}
+.projects-icon{
+    height: 19vh;
+    width: 11vw;;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 15px;
+
+    
+}
+
+.description{
+   
+    padding: 13px;
+    font-size: 11px;
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;  
+  
+}
+
+
+.projects-box{
+   
+    background-color: rgb(37, 35, 35);
+    padding: 9px;
+    border-radius: 3px;
+    border: 1px solid white;
+   
+ 
+}
+
+.projects-box:hover {
+    transform: translateY(19px);
+    color: black;
+
+    align-items: center;
+    color: red;
+   }
+
+.projects-container{
+    height: 44vh;
+    display:grid;
+    grid-template-columns: repeat(3,2fr);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-left: 6%;
+    grid-gap: 2.9rem;
+    width: 90%;
+
+   
+}
+
+
+#projects-heading{
+    text-align: center;
+font-size: 1.5rem;
+font-weight: bold;
+width: 100%;
+color: white;
+padding: 13px;
+margin-bottom: 3%;
+
+
+
+}
+
+.sub-heading{
+    text-align: center;
+    font-size: 13px;
+    height: 4.5vh;
+   margin-bottom: 3%;
+   margin-left: 18%;
+   width: 60%;
+   font-weight: bolder;
+   color: white;
+}
+
+#project-completed{
+  background-color: rebeccapurple;
+    color: white;
+    margin-top: 15px;
+   padding: 5px 10px;
+text-decoration: none;
+font-family: 'Roboto', sans-serif;  
+font-weight: bolder;
+}
+
+
+#project-para{
+    margin-top: 2%;
+    
+}
+
+#project-completed:hover{
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}
+
+
+
+
+/*footer part starts here*/
+#footer{
+  background-color: rgb(41, 3, 80);
+    height: 14vh;
+   
+   
+}
+.footer-3{
+    display: flex;
+    flex-direction: row;
+ justify-content: space-evenly;
+    color: white;
+    text-align: center;
+    line-height: 90px;
+    
+}
+#footer1{
+   
+    font-family: 'Roboto', sans-serif;  
+    font-size: 12px;  
+}
+
+
+.footer2{
+    color:rgb(216, 163, 230);
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;  
+
+}
+
+.footer2:hover{
+    color: yellow;
+}
+
+/*social media icons*/
+.social{
+    font-size: 12px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;  
+    font-weight: bold;
+
+   
+}
+#footer-fa {
+    padding: 4px;
+    font-size: 17px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0px 2px;
+    transition: all 0.5s ease;
+    border-radius: 6px;
+    border: 1px solid rgb(219, 207, 207);
+   
+}
+
+#footer-fa:hover{
+    rotate: 360;
+    color: bisque;
+    opacity: 0.8;
+    border: 2px solid white;
+  }
+ 
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+        }
+ 
+   /*
+  .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    */
+    .fa-linkedin {
+        background: #007bb5;
+        color: white;
+      }
+    
+      .fa-github{
+          background: rgb(68, 68, 68);
+          color: white;
+         
+      }
+/*For making website responsive*/
+@media screen and (max-width:990px) {
+    .container1{
+        grid-template-columns: repeat(2, 1fr);
+       
+    }
+  
+   
+    #Home{
+        background-size: contain;
+        background-position-y: bottom ;
+        
+      }
+      
+   #skills{
+    height: 104vh;
+   }
+
+  
+}
+
+@media screen and (max-width:650px) {
+
+    .container1{
+        grid-template-columns: 1fr;
+       
+    }
+    .btn{
+        display:none;
+    }
+    #projects-completed{
+        height: 250vh;
+    }
+
+    #skills{
+        height: 180vh;
+        width: 100%;
+    }
+
+    .container{
+        width: 100%;
+        height: 5%;
+    }
+    
+.projects-icon{
+    height: 12vh;
+    width: 31vw;
+    border-radius: 3px;
+    padding: 6px;
+}
+
+.projects-container{
+    height: 65vh;
+    grid-template-columns: 1fr;
+}
+
+#about-me{
+    height: 77vh;
+}
+
+.sub-heading
+{
+    font-size: 12px;
+
+}
+.footer-3{
+    display: flex;
+    flex-direction: column;
+    line-height: 3;
+}
+
+
+@media screen and (max-width:400px ) {
+      
+    #section {
+        background-size: 100%;
+    }
+
+    #footer-fa{
+        font-size: 11px;
+    }
+
+#projects-completed{
+    height: 257vh;
+}
+
+#skills{
+    height: 200vh;
+}
+
+
+#about-me{
+    height: 109vh;
+    font-size: 11px;
+}
+
+}
+
+
+@media screen and (max-width:300px) {
+    #skills{
+        height: 235vh;
+    }
+  }
+}
